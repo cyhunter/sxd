@@ -53,4 +53,6 @@ WebXR 需要 **HTTPS**（`localhost` 除外）。部署到任意支持 HTTPS 的
 
 ## 许可
 
-未声明。若需开源请补充 LICENSE 文件。
+MIT License — 见 [LICENSE](./LICENSE)。
+
+Copyright (c) 2026 cyhunter
