@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover' />
+    <meta charset='utf-8'>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <style></style>
+    <title>sxd</title>
+
+    <!-- import map -->
+    <script type="importmap">
+      {
+  "imports": {}
+}
+    </script>
+
+
+    <style>
+        #xr-splash{position:fixed;inset:0;z-index:99999;display:flex;flex-direction:column;
+            align-items:center;justify-content:center;gap:14px;
+            background:linear-gradient(160deg,#eaf4fc 0%,#d3e6f6 55%,#c2dbf1 100%);
+            font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+            color:#2b5f8f;transition:opacity 1s ease}
+        #xr-splash.hidden{opacity:0;pointer-events:none}
+        #xr-t{font-size:clamp(28px,5vw,52px);font-weight:600;letter-spacing:.12em;
+            text-shadow:0 1px 0 rgba(255,255,255,.7)}
+        #xr-s{font-size:clamp(15px,2.2vw,24px);font-weight:300;letter-spacing:.08em;color:#4a7ba6}
+        #xr-bar-w{margin-top:26px;height:3px;width:min(280px,60vw);border-radius:2px;background:rgba(43,95,143,.18);overflow:hidden}#xr-bar{width:0%;height:100%;border-radius:2px;background:#6fa3cd;transition:width .25s ease}#xr-d{margin-top:14px;display:flex;gap:8px}
+        #xr-d span{width:9px;height:9px;border-radius:50%;background:#6fa3cd;opacity:.3;
+            animation:xrP 1.2s infinite ease-in-out}
+        #xr-d span:nth-child(2){animation-delay:.2s}
+        #xr-d span:nth-child(3){animation-delay:.4s}
+        @keyframes xrP{0%,100%{opacity:.25;transform:scale(.85)}50%{opacity:1;transform:scale(1.15)}}
+    </style>
+</head>
+<body>
+    <div id="xr-splash"><div id="xr-t">欢迎进入XR世界！</div><div id="xr-s">Welcome to the XR World!</div>
+        <div id="xr-bar-w"><div id="xr-bar"></div></div><div id="xr-d"><span></span><span></span><span></span></div></div>
+    <script>
+    (function(){var d=document.getElementById('xr-splash'),g=false;
+    function h(){if(g)return;g=true;d.classList.add('hidden');
+    setTimeout(function(){d.remove()},1100)}
+    /* 引擎 start 驱动隐藏 */;
+    setTimeout(h,90000) /* 兜底 */})();
+    </script>
+    <script type='module' src="js/index.mjs"></script>
+</body>
+</html>
